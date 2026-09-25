@@ -1,0 +1,7 @@
+{
+    "github.copilot.chat.summarizeAgentConversationHistory.enabled": false,
+    "terminal.integrated.suggest.enabled": false,
+    "js/ts.suggest.enabled": false,
+    "python.autoComplete.extraPaths": [],
+    "chat.disableAIFeatures": true
+}

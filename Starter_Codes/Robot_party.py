@@ -1,6 +1,8 @@
 # ROBOT RESCUE DATABASE - STARTER CODE
 # Your task: complete the binary search and menu system.
 # Data structure robots[ID,"name","sector", "battery", "status" ]
+import math
+import time
 
 robots = [
     [101, "Scout-1", "Sector A", 92, "AVAILABLE"],
@@ -22,6 +24,7 @@ robots = [
 ]
 
 search_history = []
+menu=("PRESS ENTER TO RETURN TO THE MENU")
 
 
 def show_all_robots():
@@ -36,18 +39,34 @@ def linear_search_robot(target_id):
     
     return None, comparisons
 def binary_search_robot(target_id):
+    print("\n\n")
     low = 0
     high = len(robots) - 1
     comparisons = 0
 
-    # TODO: Use a while loop that continues while low <= high
-    # TODO: Calculate the middle index
-    # TODO: Read the robot ID at the middle index
-    # TODO: Increase the comparisons counter
-    # TODO: Print which ID is being checked
-    # TODO: If target_id == middle ID, return the robot and comparison count
-    # TODO: If target_id > middle ID, move low above middle
-    # TODO: If target_id < middle ID, move high below middle
+    Low = 0
+    High = len(robots)-1
+    Mid = int((Low+High)/2)
+    FOUND_ID=0
+
+    while Low < High:
+        if ENT_ID == (Mid):
+            comparisons=comparisons+1
+            FOUND_ID=Mid
+            Low=High
+            print(robots[FOUND_ID-1][1]+" --ROBOT FOUND\n")
+            print("COMPARISONS MADE: ", comparisons)
+            return FOUND_ID
+        elif ENT_ID < Mid:
+            comparisons=comparisons+1
+            High = Mid
+            print(Mid, " --ROBOT NOT FOUND")
+            Mid=int((Low+High)/2)
+        elif ENT_ID > Mid:
+            comparisons=comparisons+1
+            Low=Mid
+            print(Mid, " --ROBOT NOT FOUND")
+            Mid=math.ceil((Low+High)/2)
 
     return None, comparisons
 
@@ -61,6 +80,7 @@ def show_robot(robot):
     print("Location:", robot[2])
     print("Battery: ", str(robot[3]) + "%")
     print("Status:  ", robot[4])
+    input("\n"+menu)
 
     # TODO CHALLENGE: classify battery as GOOD / LOW / CRITICAL
     # TODO CHALLENGE: say whether the robot is ready to deploy
@@ -94,7 +114,27 @@ while running:
     print("2 - Display robot database")
     print("3 - Show robots ready for deployment")
     print("4 - deploy first available robot")
-    print("5 - deplay robot by ID")
+    print("5 - deploy robot by ID")
     print("6 - Exit")
-    choice = input("select option:4")
+    choice = int(input("select option: "))
+    if choice == 1:
+        ENT_ID = int(input("Enter robot binary ID: "))
+        (binary_search_robot(target_id=ENT_ID))
+        input(menu)
 
+    elif choice == 2:
+        for i in robots:
+            print (i)
+        input(menu)
+
+    elif choice == 6:
+        running = False
+        print("\n\nSHUTTING DOWN")
+        time.sleep(0.2)
+        print(".")
+        time.sleep(0.25)
+        print("..")
+        time.sleep(0.15)
+        print("...\n")
+        time.sleep(0.5)
+        print("SHUTDOWN SUCCESSFUL")
