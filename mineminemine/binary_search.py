@@ -1,21 +1,18 @@
-numb = ["A","B","C","D","E","F"]
-import math
+numb = ["A","B","C","D","E","F","G","H"]
+#        0   1   2   3   4   5   6   7
 
-search = int(input("What letter?"))         # idk how to convert C to the number 3
+search = input("What letter?")
 
 Low = 0
 High = len(numb)-1
-Mid = int((Low+High)/2)
 
-while Low < High:
-    if search == (Mid):
-        print ("Found")
-        Low=High
-    elif search < Mid:
-        High = Mid
-        print(Mid)
-        Mid=int((Low+High)/2)
-    elif search > Mid:
-        Low=Mid
-        print(Mid)
-        Mid=math.ceil((Low+High)/2)         # for some reason it doesnt round 4.5 to 5 unless i import this
+while Low <= High:
+    Mid = (Low+High)//2
+    
+    if numb[Mid] == search:
+        print("Found")
+        Low = High + 1
+    elif numb[Mid] < search:
+        Low = Mid + 1
+    else:
+        High = Mid - 1
