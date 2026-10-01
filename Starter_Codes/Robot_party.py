@@ -20,9 +20,7 @@ robots = [
     [231, "Atlas-16", "Sector E", 42, "CHARGING"]
 ]
 
-search_history = []
 menu=("\nPRESS ENTER TO RETURN TO THE MENU")
-
 
 def show_all_robots():
     print("\n--- ROBOT DATABASE ---")
@@ -86,8 +84,7 @@ def show_robot(robot):
 
 def search_robot():
     target_id = int(input("Enter Robot ID: "))
-    search_history.append(target_id)
-
+    
     robot, comparisons = binary_search_robot(target_id)
 
     if robot is not None:
@@ -147,6 +144,7 @@ while running:
     print("4 - deploy first available robot")
     print("5 - deploy robot by ID")
     print("6 - Exit")
+
     choice = int(input("select option: "))
     if choice == 1:
         ENT_ID = int(input("Enter robot's designated number: "))
@@ -154,6 +152,7 @@ while running:
         CALCULATING=0
         show_robot(robot=found_robot -1)
         input(menu)
+
 
     elif choice == 2:
         show_all_robots()
