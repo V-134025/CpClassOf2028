@@ -4,7 +4,7 @@ root = tk.Tk()
 root.title("Basic Tkinter")
 
 # Canvas
-canvas = tk.Canvas(root, width=300, height=200, bg="white")
+canvas = tk.Canvas(root, width=300, height=200, bg="purple")
 canvas.pack()
  
 # Label
