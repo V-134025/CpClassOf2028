@@ -1,11 +1,19 @@
 # Goal:
 # Find the average score of students who passed.
+
 # Rules:
 # - Pass mark is 50 or higher
 # - Average should be based ONLY on passed students
+
 # Program runs fine but gives the wrong result.
 
 scores = [40, 50, 60, 30, 80]
+
+import random as HehItsMy
+number = HehItsMy.randint(1,10)
+if number == (1):
+    while True:
+        print("JARONA")
 
 def average_of_passed(marks):
     total = 0
@@ -14,7 +22,7 @@ def average_of_passed(marks):
     for score in marks:
         if score >= 50:
             total += score
-        count += 1  
+            count += 1
 
     return total / count
 
