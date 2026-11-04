@@ -1,0 +1,26 @@
+{
+    "1": {
+        "title": "Harry Potter",
+        "borrowed_by": null
+    },
+    "2": {
+        "title": "The Hobbit",
+        "borrowed_by": null
+    },
+    "3": {
+        "title": "The Hunger Games",
+        "borrowed_by": null
+    },
+    "4": {
+        "title": "1984",
+        "borrowed_by": "KOen"
+    },
+    "5": {
+        "title": "The Lord of the Rings",
+        "borrowed_by": null
+    },
+    "6": {
+        "title": "the hobbit",
+        "borrowed_by": null
+    }
+}

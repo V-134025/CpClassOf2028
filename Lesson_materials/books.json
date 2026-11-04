@@ -1,0 +1,7 @@
+{
+    "1": {"title": "Harry Potter and the Philosopher's Stone", "borrowed_by": null},
+    "2": {"title": "The Hobbit", "borrowed_by": null},
+    "3": {"title": "The Hunger Games", "borrowed_by": "Alex"},
+    "4": {"title": "1984", "borrowed_by": null},
+    "5": {"title": "Wonder", "borrowed_by": "Sam"}
+}
